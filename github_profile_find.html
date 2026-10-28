@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="github_profile_find.css">
+</head>
+<body>
+  <main class="page">
+
+    <h1 class="title">Find a GitHub profile</h1>
+
+    <!-- Search -->
+    <form class="search" id="search-form">
+      
+      <input id="username" value="irshadia-2005" type="text" placeholder="Enter a GitHub username" autocomplete="off">
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Error / status message (JS will fill this) -->
+    <p class="message" id="message" role="status" aria-live="polite" hidden>
+      No user found. Check the spelling and try again.
+    </p>
+
+    <!-- Profile (JS will fill these in) -->
+    <section class="profile" id="profile">
+      <div class="profile-top">
+        <img class="avatar" id="avatar" src="https://github.com/irshadia-2005.png" alt="Profile picture">
+        <div class="profile-info">
+          <h2 class="name" id="name">Irshadia Neshat</h2>
+          <a class="login" id="login" href="https://github.com/irshadia-2005" target="_blank" rel="noopener">@irshadia-2005</a>
+          <p class="bio" id="bio">Learning full stack development, one project at a time.</p>
+        </div>
+      </div>
+
+      <dl class="stats">
+        <div class="followers">
+          <dt>Followers</dt>
+          <dd id="followers">12</dd>
+        </div>
+        <div class="following">
+          <dt>Following</dt>
+          <dd id="following">8</dd>
+        </div>
+        <div class="repo">
+          <dt>Repositories</dt>
+          <dd id="repo-count">5</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Repositories -->
+    <section class="repos" aria-labelledby="repos-heading">
+      <h3 id="repos-heading">Repositories</h3>
+      <ul class="repo-list" id="repo-list">
+        <li class="repo">
+          <a class="repo-name" href="#" target="_blank" rel="noopener">Elevate</a>
+          <p class="repo-desc">Student dashboard built with HTML, CSS and JavaScript.</p>
+          <span class="repo-lang">JavaScript</span>
+        </li>
+        <li class="repo">
+          <a class="repo-name" href="#" target="_blank" rel="noopener">currency-converter</a>
+          <p class="repo-desc">Converts currencies using live exchange rates.</p>
+          <span class="repo-lang">JavaScript</span>
+        </li>
+        <li class="repo">
+          <a class="repo-name" href="#" target="_blank" rel="noopener">portfolio</a>
+          <p class="repo-desc">No description provided.</p>
+          <span class="repo-lang">HTML</span>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="github_profile_find.js"></script>
+</body>
+</html>
